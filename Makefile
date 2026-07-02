@@ -5,8 +5,8 @@ AR      := ar
 CFLAGS  := -m32 -Wall -Wextra -std=c11 -I.
 NASMFLAGS := -f elf32
 
-TARGET  := libintof.a
-OBJS    := intof.o overflow.o
+TARGET  := libioverflow.a
+OBJS    := ioverflow.o overflow.o
 
 PREFIX  := /usr/local
 
@@ -17,7 +17,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(AR) rcs $@ $^
 
-intof.o: intof.c intof.h
+ioverflow.o: ioverflow.c ioverflow.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 overflow.o: overflow.asm add.asm sub.asm mul.asm
@@ -29,7 +29,7 @@ install: $(TARGET)
 	install -m 644 intof.h $(PREFIX)/include
 
 uninstall:
-	rm -f $(PREFIX)/lib/$(TARGET) $(PREFIX)/include/intof.h
+	rm -f $(PREFIX)/lib/$(TARGET) $(PREFIX)/include/ioverflow.h
 
 clean:
 	rm -f $(OBJS) $(TARGET)
