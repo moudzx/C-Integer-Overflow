@@ -51,12 +51,6 @@ typedef signed char sint8; <br>
 typedef signed short int sint16; <br>
 typedef signed int sint32; <br>
 
-## Tech
-
-- x86 Assembly
-- nasm
-- C
-
 ## Build
  
 Requires `nasm` and a 32-bit capable `gcc` (`gcc-multilib` on most distros):
@@ -66,13 +60,13 @@ sudo apt install nasm gcc-multilib
 make
 ```
  
-This produces `libintof.a`. <br>
+This produces `libioverflow.a`. <br>
 Install system-wide with:
  
 ```sh
 sudo make install
 ```
  
-which drops `libintof.a` into `/usr/local/lib` and `intof.h` into `/usr/local/include`.
+which drops `libioverflow.a` into `/usr/local/lib` and `ioverflow.h` into `/usr/local/include`.
  
 
