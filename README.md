@@ -35,6 +35,8 @@ This is a recreational project.
 ## Usage
  
 ```c
+#include <ioverflow.h>
+
 int8 a=250;
 if (!would_overflow(a,'+',5)) {
     // ..
