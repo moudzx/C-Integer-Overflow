@@ -26,6 +26,9 @@ Assembly instructions: <br>
 - jno (jump if OF=0) <br>
 - jc (jump if CF=1)
 
+<img width="3072" height="2455" alt="Screenshot 2026-09-30 at 12-40-39 Integer Overflow Demo" src="https://github.com/user-attachments/assets/c4884ed1-7635-4c62-95d2-62d5312b8fe4" />
+
+
 GCC and Clang provide compiler intrinsics that perform arithmetic while reporting whether an overflow occurred <br>
 `bool __builtin_add_overflow(type a, type b, type *result);` [/sub/mul] <br>
 
